@@ -1,0 +1,112 @@
+/* src/App.css */
+:root {
+  --poke-red: #ef5350;
+  --poke-blue: #2a75bb;
+  --poke-yellow: #ffcb05;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+}
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.app-header {
+  background: var(--poke-red);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.app-header h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #00000050;
+  margin: 0;
+}
+.app-header a {
+  text-decoration: none;
+}
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+.pokemon-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+.pokemon-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+.pokemon-card h3 {
+  margin: 10px 0 0;
+  text-transform: capitalize;
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filters input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.type-filters button {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.pokemon-detail {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.pokemon-detail img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+.pokemon-detail h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.details-section {
+  margin-top: 20px;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--poke-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
